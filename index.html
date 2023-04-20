@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Juros Compostos</title>
+    <script src="script.js"></script>
+</head>
+<body>
+    <main>
+
+        <section id="dados">
+            <h1>Calculadora de Juros Compostos</h1>
+
+            <p>Valor Inicial</p>
+            <input type="number" name="valor" id="valor" min="0">
+
+            <p>Aporte mensal</p>
+            <input type="number" name="aporteM" id="aporteM" min="0">
+
+            <p>Juros (a.a)</p>
+            <input type="number" name="juros" id="juros" min="0" max="100">
+
+            <p>Quantos meses?</p>
+            <input type="number" name="mes" id="mes" min="0">
+
+            <input type="button" value="Calcular" onclick="calculadora()">
+        </section>
+
+        <section id="res">
+
+        </section>
+    </main>
+</body>
+</html>
