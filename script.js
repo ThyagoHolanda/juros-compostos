@@ -7,7 +7,9 @@ function calculadora(){
     ano = Number(document.getElementById('ano').value)
     montante = 0
     res= document.getElementById('res')
+    res.innerHTML = "";
     taxa = []
+
 
     alert(`Valor Inicial: ${valorinicial}`)
     alert(`Aporte: ${aporte}`)
@@ -27,19 +29,24 @@ function calculadora(){
     for (i = 0; i < (ano*12); i++) {
         if(i==0){
             taxa[i] = ((valorinicial+aporte)*(juros+1)).toFixed(2)
-        }else{
-            taxa[i] = ((taxa[i-1]+aporte)*(juros+1)).toFixed(2)
+
+            res.innerHTML += i + ": " + taxa[i] + "<br>"
+        }else if (i>=1){
+            taxa[i] = ((taxa[i-1]+valorinicial+aporte)*(juros+1)).toFixed(2)
+
+            res.innerHTML += i + ": " + taxa[i-1]+taxa[i] + "<br>"
         }
     }
     soma = 0
     for (i=0; i < taxa.length; i++){
         montante += Number(taxa[i])
     }
-
-    res.innerHTML = montante
-    //totalinvestido = valorinicial+(aporte*(ano*12))
-    
-    
+/*
+    for (n = 0; n<taxa.length; n++) {
+        res.innerHTML += n + ": " + taxa[n] + "<br>"
+    }
+*/
+    res.innerHTML += `Total: ${montante.toFixed(2)}`    
     
     /**
     res.innerHTML = `Total Investido: R$ ${totalinvestido.toFixed(2)}
