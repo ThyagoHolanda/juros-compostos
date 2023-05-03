@@ -12,21 +12,31 @@
     <main>
 
         <section id="dados">
-            <h1>Calculadora de Juros Compostos</h1>
+            <div class="flex-content">
+                <h1>Calculadora de Juros Compostos</h1>
+            </div>
 
-            <p>Valor Inicial</p>
-            <input type="number" name="valor" id="valor" min="0">
+            <div class="flex-content">
+                <p>Valor Inicial</p>
+                <input type="number" name="valor" id="valor" min="0">
+            </div>
 
-            <p>Aporte mensal</p>
-            <input type="number" name="aporteM" id="aporteM" min="0">
+            <div class="flex-content">
+                <p>Aporte mensal</p>
+                <input type="number" name="aporteM" id="aporteM" min="0">
+            </div>
 
-            <p>Juros (a.a)</p>
-            <input type="number" name="juros" id="juros" min="0" max="100">
+            <div class="flex-content">
+                <p>Juros (a.a)</p>
+                <input type="number" name="juros" id="juros" min="0" max="100">
+            </div>
 
-            <p>Quantos anos?</p>
-            <input type="number" name="ano" id="ano" min="0">
+            <div class="flex-content">
+                <p>Quantos anos?</p>
+                <input type="number" name="ano" id="ano" min="0">
+            </div>
 
-            <input type="button" value="Calcular" onclick="calculadora()">
+            <div class="flex-content" id="button"><input type="button" value="Calcular" onclick="calculadora()"></div>
         </section>
 
         <section id="res">
